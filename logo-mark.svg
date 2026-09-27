@@ -1,0 +1,25 @@
+<svg width="120" height="120" viewBox="60 110 410 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Realty Launch mark">
+  <defs>
+    <linearGradient id="navy2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16264f"/><stop offset="1" stop-color="#0a1430"/></linearGradient>
+    <linearGradient id="cyl2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f6cf0"/><stop offset="0.5" stop-color="#0d1b3e"/><stop offset="1" stop-color="#2f6cf0"/></linearGradient>
+    <linearGradient id="roof2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e23b2b"/><stop offset="1" stop-color="#a81414"/></linearGradient>
+    <clipPath id="bClip2"><rect x="250" y="150" width="78" height="280"/></clipPath>
+  </defs>
+  <polygon points="360,120 430,140 430,430 360,430" fill="url(#navy2)"/>
+  <g fill="#3a7bf7"><rect x="372" y="150" width="11" height="270"/><rect x="389" y="150" width="11" height="270"/><rect x="406" y="150" width="11" height="265"/></g>
+  <polygon points="430,140 452,160 452,430 430,430" fill="#0a1430"/>
+  <rect x="250" y="150" width="78" height="280" fill="url(#navy2)"/>
+  <g clip-path="url(#bClip2)" stroke="#ffffff" stroke-width="9">
+    <line x1="240" y1="170" x2="340" y2="150"/><line x1="240" y1="205" x2="340" y2="185"/><line x1="240" y1="240" x2="340" y2="220"/><line x1="240" y1="275" x2="340" y2="255"/><line x1="240" y1="310" x2="340" y2="290"/><line x1="240" y1="345" x2="340" y2="325"/><line x1="240" y1="380" x2="340" y2="360"/><line x1="240" y1="415" x2="340" y2="395"/>
+  </g>
+  <path d="M120 200 a70 28 0 0 1 140 0 V430 H120 Z" fill="url(#cyl2)"/>
+  <g stroke="#ffffff" stroke-width="5" fill="none" opacity="0.92">
+    <path d="M122 225 a68 22 0 0 0 136 0"/><path d="M120 255 a70 22 0 0 0 140 0"/><path d="M120 285 a70 22 0 0 0 140 0"/><path d="M120 315 a70 22 0 0 0 140 0"/><path d="M120 345 a70 22 0 0 0 140 0"/><path d="M120 375 a70 22 0 0 0 140 0"/><path d="M120 405 a70 22 0 0 0 140 0"/>
+  </g>
+  <polygon points="190,430 270,320 350,430" fill="url(#roof2)" stroke="#0d1b3e" stroke-width="4"/>
+  <rect x="232" y="412" width="76" height="55" fill="#ffffff" stroke="#0d1b3e" stroke-width="4"/>
+  <g fill="#0d1b3e"><rect x="255" y="428" width="14" height="14"/><rect x="273" y="428" width="14" height="14"/><rect x="255" y="446" width="14" height="14"/><rect x="273" y="446" width="14" height="14"/></g>
+  <polygon points="330,455 392,372 454,455" fill="url(#roof2)" stroke="#0d1b3e" stroke-width="4"/>
+  <rect x="366" y="440" width="54" height="40" fill="#ffffff" stroke="#0d1b3e" stroke-width="4"/>
+  <g fill="#0d1b3e"><rect x="383" y="452" width="11" height="11"/><rect x="396" y="452" width="11" height="11"/><rect x="383" y="465" width="11" height="11"/><rect x="396" y="465" width="11" height="11"/></g>
+</svg>
