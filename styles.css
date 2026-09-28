@@ -727,16 +727,24 @@ header.site {
 /* ==========================================================================
    CATEGORY CARDS ("What We Offer") — 60% WHITE / LIME ACCENT
    ========================================================================== */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
 .cat-card {
   background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 38px 24px;
+  border-radius: 20px;
+  padding: 16px 16px 22px;
   text-align: center;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
 }
 
 .cat-card::before {
@@ -750,16 +758,52 @@ header.site {
   transform: scaleX(0);
   transition: transform 0.3s ease;
   transform-origin: left;
+  z-index: 2;
 }
 
 .cat-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow);
-  border-color: var(--violet-border);
+  border-color: rgba(125, 57, 235, 0.25);
 }
 
 .cat-card:hover::before {
   transform: scaleX(1);
+}
+
+.cat-card .cat-img {
+  width: 100%;
+  height: 185px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #f1f5f9;
+}
+
+.cat-card .cat-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cat-card:hover .cat-img img {
+  transform: scale(1.08);
+}
+
+.cat-card h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.cat-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .cat-icon {
@@ -774,25 +818,6 @@ header.site {
   margin: 0 auto 20px;
   font-size: 28px;
   transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.cat-card:hover .cat-icon {
-  transform: scale(1.1);
-  background: #ecfccb;
-  box-shadow: 0 0 16px var(--lime-glow);
-}
-
-.cat-card h3 {
-  font-size: 21px;
-  margin-bottom: 8px;
-  color: var(--ink);
-  font-weight: 700;
-}
-
-.cat-card p {
-  color: var(--muted);
-  font-size: 14.5px;
-  line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -2503,6 +2528,11 @@ footer.site a:hover {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .cat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
   
   .about-split,
   .contact-grid,
@@ -2628,6 +2658,34 @@ footer.site a:hover {
     grid-template-columns: 1fr;
   }
 
+  /* What We Offer: Strictly 2 cards in one row on mobile screens */
+  .cat-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .cat-card {
+    padding: 10px 10px 14px !important;
+    border-radius: 16px !important;
+  }
+
+  .cat-card .cat-img {
+    height: 115px !important;
+    border-radius: 10px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .cat-card h3 {
+    font-size: 15px !important;
+    margin-bottom: 3px !important;
+    line-height: 1.25 !important;
+  }
+
+  .cat-card p {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+  }
+
   section {
     padding: 60px 0;
   }
@@ -2675,5 +2733,23 @@ footer.site a:hover {
 
   .cta-band h2 {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cat-grid {
+    gap: 8px !important;
+  }
+  .cat-card {
+    padding: 8px 8px 12px !important;
+  }
+  .cat-card .cat-img {
+    height: 96px !important;
+  }
+  .cat-card h3 {
+    font-size: 13.5px !important;
+  }
+  .cat-card p {
+    font-size: 11px !important;
   }
 }
