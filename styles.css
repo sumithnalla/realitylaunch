@@ -296,7 +296,7 @@ header.site {
 }
 
 .nav .logo {
-  height: 34px;
+  height: 44px;
   width: auto;
   display: block;
   transition: transform 0.2s ease;
@@ -344,7 +344,8 @@ header.site {
   margin-left: auto;
 }
 
-/* Circular Green WhatsApp Button (Screenshot 1 & 2) */
+/* Proper Circular Green WhatsApp Button */
+.nav-wa-btn,
 .nav-cta .btn-ghost {
   width: 44px;
   height: 44px;
@@ -357,26 +358,26 @@ header.site {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
-  font-size: 0; /* Hides text '💬 WhatsApp' */
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, background 0.2s ease;
+  flex-shrink: 0;
 }
 
+.nav-wa-btn:hover,
 .nav-cta .btn-ghost:hover {
   transform: scale(1.08);
-  background: #22c35e;
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+  background: #20ba5a;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.55);
 }
 
-.nav-cta .btn-ghost::before {
-  content: "";
+.nav-wa-btn svg,
+.nav-cta .btn-ghost svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
   display: block;
-  width: 22px;
-  height: 22px;
-  background-color: #ffffff;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z'/%3E%3C/svg%3E") no-repeat center;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z'/%3E%3C/svg%3E") no-repeat center;
 }
 
 /* Enquire Now Black Pill (Screenshot 2) */
@@ -409,16 +410,27 @@ header.site {
   }
   .nav {
     height: 58px;
-    padding: 6px 8px 6px 18px;
+    padding: 6px 8px 6px 16px;
   }
   .nav .logo {
-    height: 30px;
+    height: 38px;
   }
   .nav-links {
     display: none;
   }
   .nav-cta .btn-primary {
     display: none; /* Hide 'Enquire Now' on mobile to match Screenshot 1 */
+  }
+  .nav-wa-btn,
+  .nav-cta .btn-ghost {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+  .nav-wa-btn svg,
+  .nav-cta .btn-ghost svg {
+    width: 22px;
+    height: 22px;
   }
   .menu-toggle {
     display: flex;
@@ -586,6 +598,14 @@ header.site {
   gap: 16px;
   flex-wrap: wrap;
   align-items: center;
+}
+
+/* Stats Section (Below Hero & Above What We Offer) */
+.hero-stats-section {
+  position: relative;
+  z-index: 5;
+  background: var(--bg);
+  padding: 24px 0 10px;
 }
 
 /* Floating Clean Stats Card (Nexora Style) */
@@ -1115,8 +1135,54 @@ footer.site a:hover {
   background: #ffffff;
   padding: 8px 14px;
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Social Icons */
+.foot-socials {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.foot-social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.foot-social-btn:hover {
+  background: var(--lime);
+  border-color: var(--lime);
+  color: #0b0f17;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(198, 255, 51, 0.35);
+}
+
+.foot-social-btn svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.foot-social-btn svg path[d*="M18 2h-3"],
+.foot-social-btn svg polygon {
+  fill: currentColor;
 }
 
 .foot-bottom {
@@ -1353,36 +1419,145 @@ footer.site a:hover {
    ========================================================================== */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 48px;
-}
-
-.contact-info .info-row {
-  display: flex;
-  gap: 18px;
-  margin-bottom: 28px;
   align-items: flex-start;
 }
 
-.contact-info .cat-icon {
-  margin: 0;
-  flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  font-size: 22px;
-}
-
-.contact-info h3 {
-  font-size: 19px;
-  color: var(--ink);
-  margin-bottom: 4px;
+/* Reach Us (Screenshot Style in Theme Palette) */
+.reach-tag {
+  font-size: 13px;
   font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--violet);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  display: block;
 }
 
-.contact-info p {
+.reach-items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reach-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.reach-icon-badge {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e293b;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.reach-item:hover .reach-icon-badge {
+  background: var(--violet-soft);
+  border-color: var(--violet-border);
+  color: var(--violet);
+  transform: scale(1.08);
+}
+
+.reach-icon-badge svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.reach-text h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0 0 5px 0;
+  line-height: 1.25;
+}
+
+.reach-text p {
+  font-size: 14.5px;
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.reach-text a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.reach-text a:hover {
+  color: var(--violet);
+  text-decoration: underline;
+}
+
+.reach-socials {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+
+.social-circle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #334155;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.social-circle-btn:hover {
+  border-color: var(--violet);
+  color: var(--violet);
+  background: var(--violet-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(125, 57, 235, 0.18);
+}
+
+.social-circle-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-circle-btn svg path[d*="M18 2h-3"],
+.social-circle-btn svg polygon {
+  fill: currentColor;
+}
+
+.optional-tag {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: 6px;
 }
 
 .form-card {
@@ -1894,34 +2069,10 @@ footer.site a:hover {
 .lb-next { right: 24px; }
 
 /* ==========================================================================
-   WHATSAPP FLOATING BUTTON
+   WHATSAPP FLOATING BUTTON (Disabled - present in navbar)
    ========================================================================== */
 .wa-float {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  z-index: 120;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #25d366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
-  font-size: 30px;
-  color: #ffffff;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.wa-float:hover {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 14px 34px rgba(37, 211, 102, 0.55);
-}
-
-.wa-float span {
-  font-size: 30px;
-  line-height: 1;
+  display: none !important;
 }
 
 /* ==========================================================================
@@ -2524,6 +2675,20 @@ footer.site a:hover {
    RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS
    ========================================================================== */
 @media (max-width: 860px) {
+  .hero {
+    background-image:
+      linear-gradient(180deg, 
+        rgba(11, 15, 23, 0.85) 0%, 
+        rgba(11, 15, 23, 0.5) 40%, 
+        rgba(11, 15, 23, 0.78) 85%, 
+        #ffffff 100%
+      ),
+      url('images/phone hero.png');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   .grid-3,
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
@@ -2534,10 +2699,26 @@ footer.site a:hover {
     gap: 18px;
   }
   
-  .about-split,
-  .contact-grid,
-  .foot-grid {
+  .about-split {
     grid-template-columns: 1fr;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  
+  .foot-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 20px;
+  }
+
+  .foot-brand-col {
+    grid-column: 1 / -1;
+  }
+
+  .foot-contact-col {
+    grid-column: 1 / -1;
   }
   
   .hero h1,
