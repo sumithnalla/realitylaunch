@@ -1114,7 +1114,7 @@ footer.site h4 {
   letter-spacing: -0.01em;
 }
 
-footer.site a,
+footer.site a:not(.foot-social-btn),
 footer.site p {
   color: #94a3b8;
   font-size: 14.5px;
@@ -1124,7 +1124,7 @@ footer.site p {
   transition: all 0.2s ease;
 }
 
-footer.site a:hover {
+footer.site a:not(.foot-social-btn):hover {
   color: var(--lime);
   transform: translateX(2px);
 }
@@ -1142,47 +1142,65 @@ footer.site a:hover {
 /* Footer Social Icons */
 .foot-socials {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
   margin-top: 18px;
   flex-wrap: wrap;
 }
 
+footer.site a.foot-social-btn,
 .foot-social-btn {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #cbd5e1 !important;
+  text-decoration: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  box-sizing: border-box;
   transition: all 0.2s ease;
-  text-decoration: none;
+  flex-shrink: 0;
 }
 
+footer.site a.foot-social-btn:hover,
 .foot-social-btn:hover {
   background: var(--lime);
   border-color: var(--lime);
-  color: #0b0f17;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(198, 255, 51, 0.35);
+  color: #0b0f17 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 14px rgba(198, 255, 51, 0.4);
 }
 
 .foot-social-btn svg {
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
+  display: block;
   stroke: currentColor;
   stroke-width: 2;
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
+  margin: 0 auto;
 }
 
 .foot-social-btn svg path[d*="M18 2h-3"],
 .foot-social-btn svg polygon {
   fill: currentColor;
+  stroke: none;
+}
+
+.foot-social-btn svg path[d*="M16 8a6"] ~ rect,
+.foot-social-btn svg path[d*="M16 8a6"] ~ circle {
+  fill: currentColor;
+  stroke: none;
 }
 
 .foot-bottom {
@@ -1551,6 +1569,13 @@ footer.site a:hover {
 .social-circle-btn svg path[d*="M18 2h-3"],
 .social-circle-btn svg polygon {
   fill: currentColor;
+  stroke: none;
+}
+
+.social-circle-btn svg path[d*="M16 8a6"] ~ rect,
+.social-circle-btn svg path[d*="M16 8a6"] ~ circle {
+  fill: currentColor;
+  stroke: none;
 }
 
 .optional-tag {
